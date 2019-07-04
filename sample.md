@@ -73,7 +73,7 @@ Reference-style:
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
-[profile]: ./img/profile_pic.jpg "profile picture"
+[profile]: https://serve-md.charlesdlandau.net/img/profile_pic.jpg "profile picture"
 
 Inline `code` has `back-ticks around` it.
 
