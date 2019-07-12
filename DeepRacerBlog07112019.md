@@ -24,14 +24,14 @@ So in general, our task is accomplished by defining:
 * The reward function
 * How much throttle / how many throttle settings can the model select.
 * How sharply can it turn / how many angles in that range can it select.
-* Hyperparameters like..
+* ...and hyperparameters like..
 1. *learning rate* (how the model updates) and...
 2. *entropy* (how often the model takes a random action to ensure all the actions are getting trained on) and...
 3. *training time* (how long the model trains **and therefore how much it costs you to train it**)
 
 Given the problem, these are three design principles that I've adopted:
 
-### Principle One: Anthropomorphize.
+### Principle One: Anthropomorphize
 
 Your reward function is probably the most important thing you're doing in this process. The reward function has predefined inputs documented by AWS, like "distance from center line" or "speed". So what would you do if you were teaching somebody to race a car? You give them a high five when they complete a race, and you dress them down for stupid stuff like sitting still or crashing. For everything else, you advise. "Go faster" you say. "Turn like so" you say. Your model is the racer, you are the coach, and your reward function is how you "talk" to it.
 
@@ -47,8 +47,7 @@ Keep It Simple Stupid. What does that look like in this context?
 
 ### Principle Three: Go Fast
 
-This should be self explanatory, so why am I mentioning it? The model is solving a complex problem involving steering, speed, but also longevity (finish the whole race and all that entails) and stability (don't zig-zag). DeepRacer poses all those problems to you, but it's fundamentally a race. In some other context, like with real cars, you wouldn't accept a model that crashes. **This isn't that.** Go as fast as you can without crashing all the time. Yes, punish crashing. Yes, steering is important. Still you are training a racer and racers wanna go fast.
-
+This should be self explanatory, so why am I mentioning it? The model is solving a complex problem involving steering, speed, but also longevity and stability. DeepRacer poses all those problems to you, but it's fundamentally a race. In some other context, like with real cars, you wouldn't accept a model that crashes. **This isn't that.** Go as fast as you can without crashing all the time. Yes, punish crashing. Yes, steering is important. Still, you are training a racer and racers wanna go fast. When your focus is on one of the other parts of the problem, keep it in the back of your mind.
 
 ### Bonus Principle: Have Fun
 
@@ -60,4 +59,4 @@ There are a lot of companies, some of them pretty large, that are represented in
 
 1. We met a BUNCH of cool people.
 2. We learned about a ton of cool services and technologies (Honorable mentions include [AWS CDK](https://aws.amazon.com/cdk), [Kong](https://konghq.com/kong/), [DataDog](https://www.datadoghq.com/))
-3. We had a ton of fun.
+3. We had BUCKETS of fun. BOATLOADS of fun.
