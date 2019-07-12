@@ -1,6 +1,6 @@
 #### Design Principles for World Class Reinforcement Learning on AWS DeepRacer
 
-![The DeepRacer track at AWS Summit NYC](img/DRNYC07112019/track.jpg)
+![The DeepRacer track at AWS Summit NYC](/img/deepRacer072019Track.jpg)
 
 Yesterday was a really fun day at AWS Summit in New York, and I wanted to sit down and record my thoughts. We also happened to place 5th in the AWS DeepRacer competition there. So, in this post I'm going to give some TLDRs and "see also"s about DeepRacer, share the design principles that enabled us to succeed, and then wrap up with my general thoughts about the conference. I promise that there will be no puns in this post.
 
@@ -9,7 +9,7 @@ Yesterday was a really fun day at AWS Summit in New York, and I wanted to sit do
 
 **DeepRacer, briefly:** It's a racing league. The participants are coaches, who "train" reinforcement learning models to drive the car. Races are held at AWS summits across the globe, and there are also races held only on simulators ("virtual races"). You do the training on simulators provided by AWS. Standing is an empirical demonstration that your shop has (literally!) world class data science chops -- and big name organizations are participating accordingly. As far as I am concerned, everyone who manages to get the car around the track AT ALL has accomplished a very hard task and I respect their skills.
 
-![The DeepRacer standings for the NYC race.](img/DRNYC07112019/deepRacerLeaderBoard.jpg)
+![The DeepRacer standings for the NYC race.](/img/deepRacer072019LeaderBoard.jpg)
 
 [Check out all the leaderboards here.](https://aws.amazon.com/deepracer/schedule-and-standings/)
 
@@ -62,7 +62,7 @@ There are a lot of companies, some of them pretty large, that are represented in
 
 I think if you follow these priciples you can make a race-worthy model and have an awesome time doing it.
 
-![Inserting the model into the car](img/DRNYC07112019/insertingModel.jpg)
+![Inserting the model into the car](/img/deepRacer072019InsertingModel.jpg)
 
 Putting the model in the car.
 
