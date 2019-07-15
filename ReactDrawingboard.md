@@ -1,10 +1,9 @@
 #### React Drawingboard
 
+A simple drawingboard built with MUI v3 and FabricJS
 
-##### A simple drawingboard built with MUI v3 and FabricJS
 
-
-A basic drawing app featuring:
+Featuring:
 
 1. Color selection
 2. Fine, medium and wide brush
