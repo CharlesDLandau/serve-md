@@ -16,11 +16,11 @@ And you can see the source code for demo here: [https://github.com/CharlesDLanda
 
 Here's a capture of it in the messaging view:
 
-![Message view]()
+![Message view](https://serve-md.charlesdlandau.net/img/chatterNLPBlogMessageView.jpg)
 
 And here is the analysis view:
 
-![Analysis view]()
+![Analysis view](https://serve-md.charlesdlandau.net/img/chatterNLPBlogAnalysisView.jpg)
 
 ##### 1. Core Concepts
 
@@ -39,7 +39,6 @@ And here is the analysis view:
 Mostly, the demo app is responsible for passing around a `messages` array. The array gets initialized at the top of the component hierarchy, used for demoing NLP processes, and parsed for dataviz.
 
 ````
-javascript
 const App = (props) => {
 
   const [messages, setMessages] = useState(dummyMessages)
@@ -71,7 +70,6 @@ In this demo I didn't really care about the logic of multiple users, or named us
 Eventually, all the analysis happens in a class `TextAnalysis`.
 
 ````
-javascript
 import nlp from 'compromise';
 
 class TextAnalysis{
@@ -89,7 +87,6 @@ Mostly, `TextAnalysis` is consumed via its `.cardData` method, which returns har
 
 
 ````
-javascript
 {
   title: "Parts of Speech",
   chartData: {
@@ -116,7 +113,6 @@ What's going on here?
 
 So, we can populate the `chartData` with the number of matches for parts of speech:
 ````
-javascript
 [
 this.mergedDocs.match('#Noun'
   ).out('array').length,
@@ -132,7 +128,6 @@ Note the `.out` method exposed by `compromise`, this is typically how we extract
 These and `chartOpts` and `chartType` get passed on to [Chartist](https://gionkunz.github.io/chartist-js/), which we're using for dataviz.
 
 ````
-javascript
 // Parses a single object from TextAnalysis.cardData()
 function AnalysisCard(props){
   var { data } = props
@@ -166,7 +161,6 @@ That's all it took!
 ...almost. Compromise doesn't seem to ship with a TF-IDF vectorizer (I'm spoiled by Scipy). So, within `TextAnalysis` we can implement our own...
 
 ````
-javascript
 tf(d, occ){
   // Takes a document and N occurrences of a term
   // Returns the term frequency (tf)
@@ -240,7 +234,7 @@ tfIdf(doc){
 
 With that, we can also chart the top weighted words for a random message!
 
-![Plotted TFIDF]()
+![Plotted TFIDF](https://serve-md.charlesdlandau.net/img/chatterNLPBlogTFIDF.jpg)
 
 
 ##### Pros and cons
