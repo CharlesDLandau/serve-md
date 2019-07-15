@@ -1,10 +1,10 @@
 #### Natural Language Processing... in the Browser???
 
-Not too long ago I was looking for a way to explore React Hooks and Material UI v4 and just generally brush up on some frontend basics as they are in current year. I came to JS by way of Python and I thought to myself "hey maybe I can `npm install` some of the data-sciency stuff I'm used to `pip install`-ing."
+Not too long ago I was looking for a way to explore React Hooks and Material UI v4 and just generally brush up on some frontend basics as they are in current year. I came to JS by way of Python and I thought to myself "hey maybe I can `npm install` some of the data-sciency stuff I'm used to `pip install`-ing." Maybe I could take the boring practice problem of a chat client and spice it up with some natural language processing.
 
 ![Bad idea](https://media.giphy.com/media/3o7bugfnfUypgWzwrK/giphy.gif)
 
-Anyway it turns out you can. In this post I'm going to:
+Anyway it turns out you *can*, even if it's not the best idea. In this post I'm going to:
 
 1. Briefly introduce core concepts
 2. Show how [compromise.js](https://github.com/spencermountain/compromise) enables us to do some basic NLP in a React app.
@@ -36,7 +36,7 @@ And here is the analysis view:
 
 ##### 2. Show and tell
 
-Mostly, the demo app is responsible for passing around a `messages` array. The array gets initialized at the top of the component hierarchy, used for demoing NLP processes, and parsed for dataviz.
+Mostly, the demo app is responsible for passing around a `messages` array. The array gets initialized at the top of the component hierarchy, used for NLP processes, and parsed for dataviz.
 
 ```javascript
 const App = (props) => {
@@ -67,7 +67,7 @@ const App = (props) => {
 
 In this demo I didn't really care about the logic of multiple users, or named users, or really anything other than having two users, so "red" and "blue" pass around the `user` state, and `messages` contain pretty much all the data we care about.
 
-Eventually, all the analysis happens in a class `TextAnalysis`.
+Eventually, all the analysis happens in a class `TextAnalysis`, which receives the `messages` array.
 
 ```javascript
 import nlp from 'compromise';
@@ -111,7 +111,7 @@ What's going on here?
 
 `compromise` analyzed all the text from all the messages in the `constructor` and stored it in `this.mergedDocs`. So, many of the methods of a `compromise` object are exposed by `this.mergedDocs`, including `.match()` for matching tags.
 
-So, we can populate the `chartData` with the number of matches for parts of speech:
+We can populate the `chartData` with the number of matches for parts of speech:
 ```javascript
 [
 this.mergedDocs.match('#Noun'
@@ -248,7 +248,7 @@ I don't know if you should do this, or at least if you do this you should really
 4. One of the benefits of doing preprocessing in the backend is that you can operate on your whole dataset -- in the browser we can only calculate TFIDF using the messages *in the browser*, in the backend we could get a more useful weight using all the messages.
 
 **Pros**
-1. You're using the user's browser to do the analysis. Maybe that analysis costs a lot to run on AWS or elsewhere...
+1. You're using the user's browser to do the analysis. Maybe that analysis costs a lot to run on the public cloud or elsewhere...
 2. All the insights can be fed back into client and shared with the user (e.g. the analysis view in our demo).
 3. More analysis in the browser means you could potentially find a way to do more filtering in the browser, ultimately leading to fewer calls to your API.
 
