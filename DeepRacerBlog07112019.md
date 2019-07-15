@@ -13,7 +13,7 @@ Yesterday was a really fun day at AWS Summit in New York, and I wanted to sit do
 
 [Check out all the leaderboards here.](https://aws.amazon.com/deepracer/schedule-and-standings/)
 
-**Reinforcement Learning, briefly:** Instead of optimizing a model for predicting labels (supervised learning) or a model that finds patterns in unlabeled data (unsupervised learning), **RL** takes an "action space" and "environment" as input, and it optimizes on a "reward function." 
+**Reinforcement Learning, briefly:** Instead of optimizing a model for predicting labels (supervised learning) or a model that finds patterns in unlabeled data (unsupervised learning), **RL** takes an "action space" and "environment" as input, and it optimizes on a "reward function."
 
 DeepRacer does a great job of introducing themselves and RL in their materials, so if you want to go beyond TLDR, then... see also: [https://aws.amazon.com/deepracer/](https://aws.amazon.com/deepracer/)
 
@@ -66,11 +66,12 @@ I think if you follow these priciples you can make a race-worthy model and have 
 
 Putting the model in the car.
 
-## Congratulations to the medalists, [Atchima, Michael and Nelson](https://twitter.com/AWSonAir/status/1149442689940819969)!
+##### Congratulations to the medalists, [Atchima, Michael and Nelson](https://twitter.com/AWSonAir/status/1149442689940819969)!
+
+
 
 ##### Other Thoughts on the Summit:
 
 1. We met a BUNCH of cool people.
 2. We learned about a ton of cool services and technologies (Honorable mentions include [AWS CDK](https://aws.amazon.com/cdk), [Kong](https://konghq.com/kong/), [DataDog](https://www.datadoghq.com/))
 3. We had BUCKETS of fun. (Ok I had to have one pun.)
-
