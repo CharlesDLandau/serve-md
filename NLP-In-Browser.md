@@ -24,21 +24,21 @@ And here is the analysis view:
 
 ##### 1. Core Concepts
 
-*Natural Language Processing (NLP)* tries to extract meaning, semantics, sentiment, tags, named entities, and more from text. I'm oversimplifying but I have a good excuse I swear. Chatbots, speech recognition, and search are some of the use cases for NLP.
+**Natural Language Processing (NLP)** tries to extract meaning, semantics, sentiment, tags, named entities, and more from text. I'm oversimplifying but I have a good excuse I swear. Chatbots, speech recognition, and search are some of the use cases for NLP.
 
-*Tags* in NLP represent parts of speech like "verb" or "article", but you can also call more specific designations a tag, like "WeekDay". Compromise ships with a nice set of tags [https://observablehq.com/@spencermountain/compromise-tags](https://observablehq.com/@spencermountain/compromise-tags) and extensibility for adding new ones.
+**Tags** in NLP represent parts of speech like "verb" or "article", but you can also call more specific designations a tag, like "WeekDay". Compromise ships with a nice set of tags [https://observablehq.com/@spencermountain/compromise-tags](https://observablehq.com/@spencermountain/compromise-tags) and extensibility for adding new ones.
 
-*Corpus* the body of text being analyzed. For example, if you were doing NLP and analysis on a book, that book is your corpus.
+**Corpus** is the body of text being analyzed. For example, if you were doing NLP and analysis on a book (or the complete works of so-and-so), that is your corpus. Some corpora are purpose-made and might be pre-tagged.
 
-*Documents* are each unit of text being analyzed. For example, in the demo chat app, each message constitutes a document.
+**Documents** are each unit of text being analyzed. For example, in the demo chat app, each message constitutes a document.
 
-*TF-IDF* is a method for measuring which words are most meaningful in a corpus. It's the product of how often a word appears in a single document versus how often it appears all documents. The measure is ["highest when the term occurs many times within a small number of documents"](https://nlp.stanford.edu/IR-book/html/htmledition/tf-idf-weighting-1.html)
+**TF-IDF** is a method for weighting the meaning of words in a document. The measure is ["highest when the term occurs many times within a small number of documents"](https://nlp.stanford.edu/IR-book/html/htmledition/tf-idf-weighting-1.html). To calculate it, you need the corpus, and you need to select a specific term in a specific document.
 
 ##### 2. Show and tell
 
 Mostly, the demo app is responsible for passing around a `messages` array. The array gets initialized at the top of the component hierarchy, used for demoing NLP processes, and parsed for dataviz.
 
-````
+```javascript
 const App = (props) => {
 
   const [messages, setMessages] = useState(dummyMessages)
@@ -63,13 +63,13 @@ const App = (props) => {
   return (...);
 
 }
-````
+```
 
 In this demo I didn't really care about the logic of multiple users, or named users, or really anything other than having two users, so "red" and "blue" pass around the `user` state, and `messages` contain pretty much all the data we care about.
 
 Eventually, all the analysis happens in a class `TextAnalysis`.
 
-````
+```javascript
 import nlp from 'compromise';
 
 class TextAnalysis{
@@ -82,11 +82,11 @@ class TextAnalysis{
 ...
 
 };
-````
+```
 Mostly, `TextAnalysis` is consumed via its `.cardData` method, which returns hardcoded objects like:
 
 
-````
+```javascript
 {
   title: "Parts of Speech",
   chartData: {
@@ -106,13 +106,13 @@ Mostly, `TextAnalysis` is consumed via its `.cardData` method, which returns har
     labelDirection: 'explode'
   }
 }
-````
+```
 What's going on here?
 
 `compromise` analyzed all the text from all the messages in the `constructor` and stored it in `this.mergedDocs`. So, many of the methods of a `compromise` object are exposed by `this.mergedDocs`, including `.match()` for matching tags.
 
 So, we can populate the `chartData` with the number of matches for parts of speech:
-````
+```javascript
 [
 this.mergedDocs.match('#Noun'
   ).out('array').length,
@@ -121,13 +121,13 @@ this.mergedDocs.match('#Verb'
 this.mergedDocs.match('#Adjective'
     ).out('array').length
 ]
-````
+```
 
 Note the `.out` method exposed by `compromise`, this is typically how we extract parsed data from analyzed documents. [It supports parsing to text, arrays, html, normalized text, and even csv among others](https://observablehq.com/@spencermountain/compromise-api).
 
 These and `chartOpts` and `chartType` get passed on to [Chartist](https://gionkunz.github.io/chartist-js/), which we're using for dataviz.
 
-````
+```javascript
 // Parses a single object from TextAnalysis.cardData()
 function AnalysisCard(props){
   var { data } = props
@@ -155,12 +155,12 @@ function AnalysisCard(props){
     </Grid>
   )
 }
-````
+```
 That's all it took!
 
 ...almost. Compromise doesn't seem to ship with a TF-IDF vectorizer (I'm spoiled by Scipy). So, within `TextAnalysis` we can implement our own...
 
-````
+```javascript
 tf(d, occ){
   // Takes a document and N occurrences of a term
   // Returns the term frequency (tf)
@@ -228,7 +228,7 @@ tfIdf(doc){
   return sortedTfIdfVector
 
 }
-````
+```
 
 (This felt more than a little hacky, so if anybody critiques my implementation that would be quite welcome.)
 
@@ -242,8 +242,8 @@ With that, we can also chart the top weighted words for a random message!
 I don't know if you should do this, or at least if you do this you should really think hard about why.
 
 **Cons**
-1. You're using the user's browser to do the analysis. The same browser that's serving them that beautiful user experience you've been slaving over. Doing this in a way that definitely won't degrade the UX isn't impossible.
-2. Compromise is ~200kb and the lead author [says you probably can't shake that tree](https://github.com/spencermountain/compromise#--of-course-theres-a-lot-more-stuff). That's not huge but it's not small either.
+1. You're using the user's browser to do the analysis. The same browser that's serving them that beautiful user experience you've been slaving over.
+2. Compromise is ~200kb and the lead author [says you probably can't shake that tree](https://github.com/spencermountain/compromise#--of-course-theres-a-lot-more-stuff).
 3. Is data preprocessing already a goal for the frontend? Is your organization going to make it one? Does this require dropping a bunch of code from your team into a codebase mostly maintained by another team? Have you taken their temperature about that yet?
 4. One of the benefits of doing preprocessing in the backend is that you can operate on your whole dataset -- in the browser we can only calculate TFIDF using the messages *in the browser*, in the backend we could get a more useful weight using all the messages.
 
