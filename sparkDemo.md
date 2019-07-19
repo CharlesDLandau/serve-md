@@ -1,7 +1,7 @@
 
 ### Provision Spark Clusters and Run Jobs Right in Your Notebook
 
-![Spark!](./img/jez-timms-spark.jpg)
+![Spark!](https://serve-md.charlesdlandau.net/img/jez-timms-spark.jpg)
 Photo by Jez Timms on [Unsplash](https://unsplash.com/photos/_Ch_onWf38o)
 
 We'll be using GCP SDKs to provision Spark clusters and run PySpark jobs on them -- all from a notebook. In fact, the source for this document IS a notebook. You can clone this demo here:
@@ -69,16 +69,16 @@ def response_parser(client_obj, verbose=False):
     for page in client_obj.pages:
         for element in page:
             responses.append(element)
-           
+
     if not responses and verbose:
         print('No responses found!')
-        
+
     if responses and verbose:
         for resp in responses:
             print(resp)
-    
+
     return responses
-        
+
 clusters = client.list_clusters(project_id, 'global')
 responses = response_parser(clusters);
 len(responses)
@@ -99,7 +99,7 @@ We are showing zero clusters provisioned. Let's provision a cluster.
 
 def handler(ops):
     result = ops.result()
-    
+
     # Uncomment this to see results from the calls in this notebook
     # (this can also help you learn config options)
     # print(result)
@@ -143,7 +143,7 @@ len(responses)
 
 
 
-Hooray! 
+Hooray!
 
 #### Run a job
 
@@ -204,13 +204,13 @@ def upload_blob(bucket, source_file_name, destination_blob_name):
     print('File {} uploaded to {}.'.format(
         source_file_name,
         destination_blob_name))
-    
+
 # Use the helper function to upload our code
 upload_blob(bucket, './main.py', "input_files/main.py")
 ```
 
     File ./main.py uploaded to input_files/main.py.
-    
+
 
 Now that our code is in place, we need to make an instance of `dataproc_v1.types.PySparkJob`
 
@@ -222,7 +222,7 @@ pyspark_job = dataproc_v1.types.PySparkJob(
 )
 ```
 
-`main_python_file_uri` points to our code. We could also pass `python_file_uris` and `file_uris` if we had more supporting files to send, but we don't. 
+`main_python_file_uri` points to our code. We could also pass `python_file_uris` and `file_uris` if we had more supporting files to send, but we don't.
 
 Our `main.py` script uses `sys.argv[1]` to construct an output directory in our bucket, so we pass that to `args`.
 
@@ -305,7 +305,7 @@ for page in bucket.list_blobs().pages:
     pyspark_output/
     pyspark_output/_SUCCESS
     pyspark_output/part-00000-df4302c1-aec3-415b-84d6-66bd915ae938-c000.csv
-    
+
 
 Our outputs are downloaded locally. We're done, so let's tear it all down.
 
@@ -338,5 +338,4 @@ Why would you want to know how to do this? For one-off batch processing and repo
 
 Thank you for reading. I hope this has been helpful for you.
 
-I'm always learning, so if you see anything wrong in here I hope you'll leave me a comment to share your insights. Or just leave a comment anyway.
-
+I'm always learning, so if you see anything wrong in here I hope you'll leave me a note to share your insights. Or just leave a note anyway.
