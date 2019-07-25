@@ -1,8 +1,6 @@
 
 ![a robot](https://serve-md.charlesdlandau.net/img/robot-rrmonkey-unsplash.jpg)
 
-<figcaption>Photo by Rock'n Roll Monkey on Unsplash</figcaption>
-
 #### Train Robots to Shoot Lazers at Aliens With Software Funded By Elon Musk and Microsoft
 
 In this introduction I'm going to skip ahead to the robots shooting lazers because life is too short. Don't be intimidated by the code below, if you stick around after the lazers I'll explain everything that's happening.
