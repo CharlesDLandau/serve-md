@@ -107,6 +107,8 @@ def render_video(episode_num, env, video_dir=None):
 render_video(0, result['env'])
 ```
 
+![](https://serve-md.charlesdlandau.net/img/openai-spaceinvaders-vid.jpg)
+
 And that's all it took! We wrote some code and it made the robot shoot the lazers. If that's what you came for, now's the time to leave. *But*, if you're interested in adding reinforcement learning to your toolbox, I hope you'll read on. And now we'll get to the topic behind the topic...
 
 #### Introduction to Reinforcement Learning
@@ -291,7 +293,3 @@ In this introduction you saw robots shoot lazers at aliens. What more do you wan
 
 Next time maybe we'll land on the moon or something. Thanks for reading!
 
-
-```python
-
-```
