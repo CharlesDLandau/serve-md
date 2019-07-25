@@ -1,4 +1,8 @@
 
+![a robot](https://serve-md.charlesdlandau.net/img/robot-rrmonkey-unsplash.jpg)
+
+<figcaption>Photo by Rock'n Roll Monkey on Unsplash</figcaption>
+
 #### Train Robots to Shoot Lazers at Aliens With Software Funded By Elon Musk and Microsoft
 
 In this introduction I'm going to skip ahead to the robots shooting lazers because life is too short. Don't be intimidated by the code below, if you stick around after the lazers I'll explain everything that's happening.
@@ -107,7 +111,7 @@ def render_video(episode_num, env, video_dir=None):
 render_video(0, result['env'])
 ```
 
-![](https://serve-md.charlesdlandau.net/img/openai-spaceinvaders-vid.jpg)
+![](https://serve-md.charlesdlandau.net/img/openai-spaceinvaders-vid.mp4)
 
 And that's all it took! We wrote some code and it made the robot shoot the lazers. If that's what you came for, now's the time to leave. *But*, if you're interested in adding reinforcement learning to your toolbox, I hope you'll read on. And now we'll get to the topic behind the topic...
 
@@ -117,7 +121,7 @@ I'm going to devote some time to writing about beginner/intermediate RL solution
 
 **With that out of the way....** We're going to set aside the code you saw above for a little while and introduce core concepts at...
 
-![](https://static.tvtropes.org/pmwiki/pub/images/ludicrous_speed.jpg)
+![spaceballs_ludicrous_speed](https://static.tvtropes.org/pmwiki/pub/images/ludicrous_speed.jpg)
 
 #### Machine Learning Besides
 
