@@ -101,7 +101,7 @@ imshow(observation_sample[0][139:172, 60:100, :])
 
 
 
-![png](output_9_1.png)
+![png](https://serve-md.charlesdlandau.net/img/output_9_1.png)
 
 
 So, we can certainly crop this image and worry less about the noise...
@@ -128,7 +128,7 @@ imshow(observation_sample[0][80:124, 12:160, :])
 
 
 
-![png](output_13_1.png)
+![png](https://serve-md.charlesdlandau.net/img/output_13_1.png)
 
 
 
@@ -218,7 +218,7 @@ import matplotlib.pyplot as plt
 plt.plot([r['reward'] for r in result['history']])
 ```
 
-![reward](output_25_1.png)
+![reward](https://serve-md.charlesdlandau.net/img/output_25_1.png)
 
 
 Looks like the reward function is simply "score a hit=1 else 0". We can confirm by visualizing the observations at reward time.
