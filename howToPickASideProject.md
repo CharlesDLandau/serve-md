@@ -81,16 +81,16 @@ Befitting the narrowest part of the funnel, I think this is the hardest part of 
 The activities of this step vary wildly depending on how you do work/life balance. It also depends on how you approach projects. This step also involves creating a space where the project will live, which can be as simple as `git init` or `mkdir myNewProject`, or it could be as complicated as `all get out`. Some of the things you can consider in this area are:
 
 + Many user groups and local dev communities in big cities will host "project nights" where you can just show up with a project. You might even get some help.
-+ You could plan to stay in the office for an extra hours a few days a week.
-+ Maybe you're responsible to a spouse, significant other, tiny person, et al. How are you communicating with them about the extra work you'll be putting in?
++ You could plan to stay in the office or go to the libray for an extra hour a few days a week. Or maybe do it ad hoc whenever you have a couple hours downtime.
++ It's possible that you're responsible to a spouse, significant other, tiny person, et al. How are you communicating with them about the extra work you'll be putting in?
 + Is this going to go on my blog? On my GitHub? An app store?
 + Can this project fit in my resource constrained brain?
 
-...That last one is not made up. Pause or even abandon projects if the brain needs to handle life and work first. I can make it a priority to have small projects in my life, but each specific small project is a very low priority activity.
+...That last one is a biggie. Pause or even abandon projects if the brain needs to handle life and work first. I can make it a priority to have small projects in my life, but each specific small project is a very low priority activity.
 
 Have you made **space in your life** for this project? No? Well then circle back when you have.
 
-#### Out
+#### stdout
 
 **We've built our funnel, so what comes out of it?**
 
@@ -98,7 +98,7 @@ Well, maybe nothing. Maybe we build the whole funnel and then decide we aren't g
 
 ![just-walk-away-gif](https://media.giphy.com/media/2YqRbrADa15UA/giphy.gif)
 
-But, if you pour your time, effort and know-how into the funnel, then I think three main things can come out the bottom of your funnel:
+But, if you pour your time, effort and know-how into the funnel, then I think three main things can come out the bottom:
 
 1. Your work product
 Is it what you envisioned? Is it what you thought you would make when you started? **Who cares?** You did a thing! That's so cool!
@@ -111,4 +111,4 @@ If you did all this thinking and working and exploring and spending time away fr
 
 #### Final thoughts
 
-This blog was a small side project and my takeaways are TBD. If anything it was a nice chance to do inventory on my thought process and crack some jokes. I hope you share your own thought process for side projects in the comments.
+This blog was a small side project and my takeaways are TBD. If anything it was a nice chance to do inventory on my thought process and crack some jokes. Let me know what you think.
