@@ -1,6 +1,6 @@
 # 🤖➯🌩 (Machine Learning In the Cloud)
 
-I've been preparing a talk for my local ML usergitgroup and as a result I've had to synthesize a lot of ideas. In the talk I introduce a wide variety of "Machine Learning as a Service (MLaaS)" services and talk about how they fit in your toolkit. It's supposed to be a 45 minute talk, so the deck is pretty long... much longer than you would want for a blog post. In this post I'm going to:
+I've been preparing a talk for my local ML user group and as a result I've had to synthesize a lot of ideas. In the talk I introduce a wide variety of "Machine Learning as a Service (MLaaS)" services and talk about how they fit in your toolkit. It's supposed to be a 45 minute talk, so the deck is pretty long... much longer than you would want for a blog post. In this post I'm going to:
 
 1. Summarize the heck outta this talk.
 2. Share the slides at the end.
