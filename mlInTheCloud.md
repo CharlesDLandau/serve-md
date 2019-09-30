@@ -19,6 +19,24 @@ Machine Learning as a Service is a tautology -- it's a label for any service tha
 *  APIs that map endpoints to ML behaviors like training or prediction. (See: [wit.ai](https://wit.ai))
 * Embed ML capabilities into devices (See: [Hover2](https://gethover.com))
 
+## Worth it?
+There are several considerations to take into account when you're evaluating MLaaS versus "rolling your own" solution:
+
+**Cost:** MLaaS can seem to offer a way to mitigate the cost of building a Data Science team. Data Scientists, Big Data Engineers, and ML Engineers attract great compensation and benefits, and building a competitive recruitment process for these teams can also be difficult.
+
+_Related note: you may avoid a lot of upfront costs with some MLaaS offerings, but per-call or per-use costs tend to bake that in._
+
+**Ownership:** In many cases taking an MLaaS path means that you don’t fully own and control your models, or that you’re locked in to a platform. Rolling your own can mean having a greater degree of control. On the other hand, a proprietary model from a big 4 shop may be exactly what your organization wants.
+
+**Rapid Prototyping:** MLaaS offerings can enable a low-cost rapid prototyping approach, especially for organizations that do not have a mature rapid-prototyping practice (a skunkworks). In this way MLaaS can extend rather than displace data science capabilities.
+
+**Culture:** Many organizations seek to build not only a data science team but a "culture of innovation" of which their data science practice is a part. Having a data science team creates an in-house nexus that can advocate for itself and identify lines of business that may not be apparent to other teams.
+
+It's also worth noting that all the typical limitations of each delivery model apply:
+
+**Typical limitations of SaaS:** you only get their features when they are up (SLAs) and supported (LTS), you are budgeted for them ($$$), et cetera
+**Typical limitations of in-house production:** growing pains, recruitment costs, cruft...
+
 ## Service Categories
 
 To give a better overview of the landscape I pulled out a few categories of services that are out there for you to use. These are **non-exhaustive and overlapping** categories that map to common use cases.
