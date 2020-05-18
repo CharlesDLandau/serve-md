@@ -6,7 +6,7 @@ I think all of the above is fair, and I think the point about k8s complexity is 
 
 ## The iceberg of business value
 
-![Highly Scientific Chart](https://github.com/CharlesDLandau/serve-md/img/DockerWrongQuestion.md)
+![Highly Scientific Chart](https://github.com/CharlesDLandau/serve-md/img/tools_automation.PNG)
 
 As my question suggests, I have come to believe that the business process required to write a Dockerfile is more valuable than the tooling itself, and can require much more effort than the actual investment in Docker. Is there scripting in place to automate the build and run processes in a reproducible manner? Are all the dependencies fully documented? Have you followed the [12 Factor App](https://12factor.net/) framework or similar? Addressing these questions is where most of the value comes from, and Docker happens to be a particularly successful technology that helps organizations deliver after they’ve done so.
 
