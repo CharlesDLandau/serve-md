@@ -1,3 +1,5 @@
+# The Wrong Question About Docker and Kubernetes
+
 Not too long ago I discovered the work of a very smart and snarky cloud economist by the name of Corey Quinn. There’s a lot to admire in how Corey delivers content, his perspective on the industry, and his sense of humor. Having said that, I’ve been on the k8s learning curve for a little while now, and [Corey’s pretty bearish on the topic.](https://twitter.com/QuinnyPig/status/1121462122741940226)
 
 Corey is one of many cloud computing advocates taking this position, offered here as an example. He’s not the only one, and I even see Kelsey Hightower, one of the original evangelists for k8s, urging some caution. “Up and Running”, a book Kelsey co-authored, was my introduction to k8s, and I’ve tried to pay [close attention to Kelsey ever since.](https://twitter.com/kelseyhightower/status/1245886920443363329)
